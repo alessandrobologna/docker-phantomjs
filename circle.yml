@@ -10,7 +10,7 @@ dependencies:
 test:
   override:
     - docker run -d -p 80:80 alessandrob/phantomjs; sleep 10
-    - curl --retry 10 --retry-delay 5 -v http://localhost/?url=http://www.google.com
+    - curl --retry 10 --retry-delay 5 -v http://localhost/ -d "url=http://www.google.com"
 
 deployment:
   hub:
