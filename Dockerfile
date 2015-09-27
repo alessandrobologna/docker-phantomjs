@@ -10,7 +10,7 @@ RUN apt-get update -qq \
 RUN cd /tmp && git clone git://github.com/ariya/phantomjs.git \
 	&& cd phantomjs \
 	&& git checkout 2.0 \
-	&& cd /tmp/phantomjs && ./build.sh --jobs 2 --confirm --silent \
+	&& cd /tmp/phantomjs && ./build.sh --jobs 1 --confirm --silent \
 	&& cp /tmp/phantomjs/bin/phantomjs /usr/local/bin/phantomjs \
 	&& rm -rf /tmp/phantomjs \
 	&& apt-get purge -yqq build-essential g++ flex bison gperf ruby perl libsqlite3-dev libssl-dev libpng-dev \
